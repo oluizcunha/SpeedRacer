@@ -11,7 +11,7 @@ import ExpandMore from "@material-ui/icons/ExpandMore";
 import AccountCircleOutlinedIcon from "@material-ui/icons/AccountCircleOutlined";
 import PersonAddOutlinedIcon from "@material-ui/icons/PersonAddOutlined";
 import ListOutlinedIcon from "@material-ui/icons/ListOutlined";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom"
 import novoUsuario from './newUser';
 
 
@@ -34,9 +34,7 @@ export default function NestedList() {
 
   function handleClick() {
     // setOpen(!open);
-    const x = document.getElementById('listagem');
-    const y = document.getElementsByClassName('classes.card')
-    x = y
+    document.getElementsByClassName('listagem').style.display="block";
   }
 
   return (
@@ -45,7 +43,7 @@ export default function NestedList() {
       aria-labelledby="nested-list-subheader"
       subheader={
         <ListSubheader component="div" id="nested-list-subheader">
-         teste
+          teste
         </ListSubheader>
       }
       className={classes.root}
@@ -75,7 +73,7 @@ export default function NestedList() {
       </Collapse>
 
 
-      
+
 
       {/* novo item */}
       <ListItem button onClick={handleClick}>
