@@ -12,6 +12,7 @@ import AccountCircleOutlinedIcon from "@material-ui/icons/AccountCircleOutlined"
 import PersonAddOutlinedIcon from "@material-ui/icons/PersonAddOutlined";
 import ListOutlinedIcon from "@material-ui/icons/ListOutlined";
 import {Link} from "react-router-dom"
+import novoUsuario from './newUser';
 
 
 
@@ -32,7 +33,10 @@ export default function NestedList() {
   const [open, setOpen] = React.useState(false);
 
   function handleClick() {
-    setOpen(!open);
+    // setOpen(!open);
+    const x = document.getElementById('listagem');
+    const y = document.getElementsByClassName('classes.card')
+    x = y
   }
 
   return (
