@@ -25,6 +25,7 @@ import { createMuiTheme } from "@material-ui/core/styles";
 import ReactDOM from "react-dom";
 import lateral from "./listcolla";
 import api from "../../services/api";
+import "./dashboard.css";
 
 const theme = createMuiTheme({
   palette: {

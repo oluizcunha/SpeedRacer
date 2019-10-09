@@ -41,7 +41,7 @@ export default function NestedList() {
       aria-labelledby="nested-list-subheader"
       subheader={
         <ListSubheader component="div" id="nested-list-subheader">
-          {/* texto em cima da listagem dos menus */}
+         teste
         </ListSubheader>
       }
       className={classes.root}
@@ -53,7 +53,7 @@ export default function NestedList() {
         <ListItemText primary="Usuário" />
         {open ? <ExpandLess /> : <ExpandMore />}
       </ListItem>
-      <Collapse in={open} timeout="auto" unmountOnExit>
+      <Collapse in={true} timeout="auto" unmountOnExit>
         <List component="div" disablePadding>
           <ListItem button component={Link} to="/newuser" className={classes.nested}>
             <ListItemIcon>
@@ -70,12 +70,15 @@ export default function NestedList() {
         </List>
       </Collapse>
 
+
+      
+
       {/* novo item */}
-      {/* <ListItem button onClick={handleClick}>
+      <ListItem button onClick={handleClick}>
         <ListItemIcon>
           <AccountCircleOutlinedIcon />
         </ListItemIcon>
-        <ListItemText primary="Usuário" />
+        <ListItemText primary="Perito" />
         {open ? <ExpandLess /> : <ExpandMore />}
       </ListItem>
       <Collapse in={open} timeout="auto" unmountOnExit>
@@ -84,16 +87,16 @@ export default function NestedList() {
             <ListItemIcon>
               <PersonAddOutlinedIcon />
             </ListItemIcon>
-            <ListItemText primary="Nosvo usuário" />
+            <ListItemText primary="Novo perito" />
           </ListItem>
           <ListItem button className={classes.nested}>
             <ListItemIcon>
               <ListOutlinedIcon />
             </ListItemIcon>
-            <ListItemText primary="Listar usuário" />
+            <ListItemText primary="Listar perito" />
           </ListItem>
         </List>
-      </Collapse> */}
+      </Collapse>
     </List>
   );
 }
