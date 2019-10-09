@@ -1,5 +1,5 @@
 import React from "react";
-import  "./login.css";
+import "./login.css";
 import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
 import CssBaseline from "@material-ui/core/CssBaseline";
@@ -72,72 +72,76 @@ export default function SignIn() {
   const classes = useStyles();
 
   return (
-    <Container component="main" maxWidth="xs">
-      <CssBaseline />
-      <div className={classes.paper}>
-        <div className="row">
-          <div className="logo">
-            <img src={logo} width="200" height="125" />
+    <div className="container">
+      <div className="content">
+        <Container component="main" maxWidth="xs">
+          <CssBaseline />
+          <div className={classes.paper}>
+            <div className="row">
+              <div className="logo">
+                <img src={logo} width="200" height="125" />
+              </div>
+            </div>
+
+            <form className={classes.form} noValidate>
+              <TextField
+                variant="outlined"
+                margin="normal"
+                required
+                fullWidth
+                id="email"
+                label="Email"
+                name="email"
+                autoComplete="email"
+                autoFocus
+              />
+              <TextField
+                variant="outlined"
+                margin="normal"
+                required
+                fullWidth
+                name="password"
+                label="Senha"
+                type="password"
+                id="password"
+                autoComplete="current-password"
+              />
+              <FormControlLabel
+                control={<Checkbox value="remember" color="primary" />}
+                label="Lembre-se"
+              />
+              <ThemeProvider theme={theme}>
+                <Button
+                  type="submit"
+                  fullWidth
+                  variant="contained"
+                  color="primary"
+                  className={classes.submit}
+                  href="Dashboard"
+                >
+                  Entrar
+                </Button>
+              </ThemeProvider>
+
+              <Grid container>
+                <Grid item xs>
+                  <Link href="Dashboard" variant="body2">
+                    Esqueceu a senha?
+                  </Link>
+                </Grid>
+                <Grid item>
+                  <Link href="#" variant="body2">
+                    {"Requisitar acesso a conta"}
+                  </Link>
+                </Grid>
+              </Grid>
+            </form>
           </div>
-        </div>
-
-        <form className={classes.form} noValidate>
-          <TextField
-            variant="outlined"
-            margin="normal"
-            required
-            fullWidth
-            id="email"
-            label="Email"
-            name="email"
-            autoComplete="email"
-            autoFocus
-          />
-          <TextField
-            variant="outlined"
-            margin="normal"
-            required
-            fullWidth
-            name="password"
-            label="Senha"
-            type="password"
-            id="password"
-            autoComplete="current-password"
-          />
-          <FormControlLabel
-            control={<Checkbox value="remember" color="primary" />}
-            label="Lembre-se"
-          />
-          <ThemeProvider theme={theme}>
-            <Button
-              type="submit"
-              fullWidth
-              variant="contained"
-              color="primary"
-              className={classes.submit}
-              href="Dashboard"
-            >
-              Entrar
-            </Button>
-          </ThemeProvider>
-
-          <Grid container>
-            <Grid item xs>
-              <Link href="Dashboard" variant="body2">
-                Esqueceu a senha?
-              </Link>
-            </Grid>
-            <Grid item>
-              <Link href="#" variant="body2">
-                {"Requisitar acesso a conta"}
-              </Link>
-            </Grid>
-          </Grid>
-        </form>
+          <Box mt={5}>
+            <MadeWithLove />
+          </Box>
+        </Container>
       </div>
-      <Box mt={5}>
-        <MadeWithLove />
-      </Box>
-    </Container>
+    </div>
   );
 }
