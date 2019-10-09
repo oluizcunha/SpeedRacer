@@ -25,7 +25,7 @@ import { createMuiTheme } from "@material-ui/core/styles";
 import ReactDOM from "react-dom";
 import lateral from "./listcolla";
 import api from "../../services/api";
-import "./dashboard.css";
+import "./styles.css";
 
 const theme = createMuiTheme({
   palette: {
@@ -198,7 +198,9 @@ export default function Dashboard() {
         </Drawer>
         <main className={classes.content}>
           <div className={classes.appBarSpacer} />
-          {chamada}
+          <div id="listagem" className="listagem">
+            <h1>Hello</h1>
+          </div>
         </main>
       </ThemeProvider>
     </div>
