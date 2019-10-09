@@ -7,7 +7,7 @@ import Routes from "./routes";
 function App() {
   return (
     <div className="container">
-      <img src={logo} alt="AirCnC" />
+      {/* <img src={logo} alt="AirCnC" /> */}
       <div className="content">
         <Routes />
       </div>
