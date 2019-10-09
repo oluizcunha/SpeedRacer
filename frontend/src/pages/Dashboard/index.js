@@ -26,6 +26,8 @@ import ReactDOM from "react-dom";
 import lateral from "./listcolla";
 import api from "../../services/api";
 import "./styles.css";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import newUser from './newUser'
 
 const theme = createMuiTheme({
   palette: {
@@ -198,8 +200,14 @@ export default function Dashboard() {
         </Drawer>
         <main className={classes.content}>
           <div className={classes.appBarSpacer} />
-          <div id="listagem" className="listagem">
-            <h1>Hello</h1>
+          <div className="listagem">            
+            <BrowserRouter>
+              <Switch>
+                <Route component={newUser}/>          
+                <Route component={newUser}/>
+                <Route component={newUser}/>
+              </Switch>
+            </BrowserRouter>
           </div>
         </main>
       </ThemeProvider>
