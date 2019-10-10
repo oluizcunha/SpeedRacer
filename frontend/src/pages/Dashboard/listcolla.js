@@ -12,9 +12,7 @@ import AccountCircleOutlinedIcon from "@material-ui/icons/AccountCircleOutlined"
 import PersonAddOutlinedIcon from "@material-ui/icons/PersonAddOutlined";
 import ListOutlinedIcon from "@material-ui/icons/ListOutlined";
 import { Link } from "react-router-dom"
-import novoUsuario from './newUser';
-
-
+import newUser from './newUser'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -27,14 +25,13 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function NestedList() {
+export default function NestedList() {  
   const classes = useStyles();
   // Abrindo a tela com menu colapsado
   const [open, setOpen] = React.useState(false);
 
   function handleClick() {
-    // setOpen(!open);
-    document.getElementsByClassName('listagem').style.display="block";
+    document.getElementsByClassName("listagem").style.visibility = "hidden";
   }
 
   return (

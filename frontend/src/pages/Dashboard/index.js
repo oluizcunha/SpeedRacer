@@ -200,14 +200,8 @@ export default function Dashboard() {
         </Drawer>
         <main className={classes.content}>
           <div className={classes.appBarSpacer} />
-          <div className="listagem">            
-            <BrowserRouter>
-              <Switch>
-                <Route component={newUser}/>          
-                <Route component={newUser}/>
-                <Route component={newUser}/>
-              </Switch>
-            </BrowserRouter>
+          <div className="listagem">
+            <Route component={newUser} />           
           </div>
         </main>
       </ThemeProvider>

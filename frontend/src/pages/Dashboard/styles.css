@@ -2,10 +2,14 @@ body {
     background-image: none;
     background-color: #fff;
 }
-
-.listagem {
+.listaVisivel{
     display: none;
 }
+
+.listaOculta{
+    display: none;
+}
+
 
 ul.spot-list {
     width: 100%;
@@ -38,3 +42,9 @@ ul.spot-list li span {
     font-size: 15px;
     color: #999;
 }
+
+/*
+    UMA DIV PARA CADA BOTÃO
+        botao 1 habilita div 1 desabilita todas as divs
+        botao 2 habilita div 2 desabilita todas as divs
+*/

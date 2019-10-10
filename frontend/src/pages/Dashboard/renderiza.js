@@ -1,5 +1,6 @@
-function render(componente){
-  if (componente == 1) {
-    
-  }
+import newUser from './newUser'
+let renderizado
+function renderizaElemento() {
+     renderizado = newUser
 }
+export default renderizado;
